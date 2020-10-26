@@ -5,7 +5,7 @@ class CreateContacts < ActiveRecord::Migration[6.0]
       t.string :date
       t.string :location
       t.string :occurrence
-      t.references :individual_id, null: false, foreign_key: true
+      t.references :individual, null: false, foreign_key: true
 
       t.timestamps
     end
