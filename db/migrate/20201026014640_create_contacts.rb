@@ -8,6 +8,7 @@ class CreateContacts < ActiveRecord::Migration[6.0]
       t.references :individual, null: false, foreign_key: true
 
       t.timestamps
+      t.string :category
     end
   end
 end
