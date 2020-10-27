@@ -3,12 +3,12 @@ class CreateContacts < ActiveRecord::Migration[6.0]
     create_table :contacts do |t|
       t.string :name
       t.string :date
+      t.string :category
       t.string :location
       t.string :occurrence
-      t.references :individual, null: false, foreign_key: true
+      t.belongs_to :individual, null: false, foreign_key: true
 
       t.timestamps
-      t.string :category
     end
   end
 end

@@ -3,13 +3,15 @@
 one:
   name: MyString
   date: MyString
+  category: MyString
   location: MyString
   occurrence: MyString
-  individual_id: one
+  individual: one
 
 two:
   name: MyString
   date: MyString
+  category: MyString
   location: MyString
   occurrence: MyString
-  individual_id: two
+  individual: two
