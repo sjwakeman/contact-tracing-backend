@@ -9,7 +9,7 @@ class Api::V1::ContactsController < ApplicationController
         if contact.save
             render json: contact, status: :accepted
         else
-            render json: {errors: contact.errors.full_messages}, status: :unprocessible_entity
+            render json: {errors: contact.errors.full_messages }, status: :unprocessible_entity
         end
     end
 
