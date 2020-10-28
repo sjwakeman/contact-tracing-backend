@@ -1,7 +1,19 @@
 class Api::V1::ContactsController < ApplicationController
     def index
         contacts = Contact.all
-        render json: contacts
+
+        # options = {
+            # include associated relationship in model has to match (individual)
+        #     include: [:individual] 
+        # }
+        # @contacts = Contact.all # WORKS
+        # render json: contacts # WORKS
+        render json: ContactSerializer.new(contacts)
+
+        # TO ADD A RELATIONSHIP IN SERIALIZER
+        # render json: ContactSerializer.new(contacts, options) # WORKS
+        # render json: ContactSerializer.new(@contacts) # WORKS
+
     end
 
     def create
@@ -9,7 +21,7 @@ class Api::V1::ContactsController < ApplicationController
         if contact.save
             render json: contact, status: :accepted
         else
-            render json: {errors: contact.errors.full_messages}, status: :unprocessible_entity
+            render json: {errors: contact.errors.full_messages }, status: :unprocessible_entity
         end
     end
 
