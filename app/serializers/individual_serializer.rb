@@ -1,4 +1,4 @@
 class IndividualSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :name
 end
