@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Individual.destroy_all
+Contact.destroy_all
+
 individual1 = Individual.create(name: 'individual one')
 individual2 = Individual.create(name: 'individual two')
 individual3 = Individual.create(name: 'individual three')
