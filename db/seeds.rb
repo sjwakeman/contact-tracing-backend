@@ -12,4 +12,4 @@ individual1 = Individual.create(name: 'individual one')
 individual2 = Individual.create(name: 'individual two')
 individual3 = Individual.create(name: 'individual three')
  
-Contact.create(name: 'contact one', date: 'March 1, 2020', category: 'work', location: 'office', occurrence: '10', individual_id: '1')
+test_individual = Contact.create(name: 'contact one', date: 'March 1, 2020', category: 'work', location: 'office', occurrence: '10', individual_id: individual1.id)
