@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_10_27_141919) do
     t.string "location"
     t.string "occurrence"
     t.bigint "individual_id", null: false
+    t.string "individual_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["individual_id"], name: "index_contacts_on_individual_id"
